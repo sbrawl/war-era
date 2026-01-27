@@ -18,7 +18,7 @@ export async function trpcQuery(procedureName, input = {}) {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'X-API-Key': 'wae_0b9bde1cd9d3725c87109a1e010d3f5fc4493f2b23fff6ef7d5389636eb93fb3' // Clé API ajoutée ici
+            'X-API-Key': '' // Clé API ajoutée ici
         },
     });
 
@@ -86,4 +86,5 @@ export async function getAllCountries() {
         console.error('Erreur pays:', error);
         return [];
     }
+
 }
