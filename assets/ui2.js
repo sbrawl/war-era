@@ -261,6 +261,8 @@ export function displayUser(userData, countryData) {
     const ppPerSession = userData.skills?.production?.value || 12;
     const eestimatedworkperday = (userData.skills?.energy?.hourlyBarRegen * 24) / 10 || 0;
     const estimatedwork = formatNumber(eestimatedworkperday);
+    const estimatedautoworkperday = (userData.skills?.entrepreneurship?.hourlyBarRegen * 24) / 10 || 0;
+    const estimatedautowork = formatNumber(estimatedautoworkperday);
     const countryName = countryData?.name || 'Inconnu';
     const countryFlag = countryData?.flagEmoji || '🌍'; 
 
@@ -272,6 +274,7 @@ export function displayUser(userData, countryData) {
             <p><strong>Pays :</strong> ${countryFlag} ${countryName}</p>
             <p><strong>Votre Production Brute par Session :</strong> <strong>${ppPerSession} PP</strong></p>
             <p><strong>Sessions de Travail Estimées par Jour :</strong> <strong>${estimatedwork} sessions</strong></p>
+            <p><strong>Sessions d'Auto-Travail Estimées par Jour :</strong> <strong>${estimatedautowork} sessions</strong></p>
         </div>
     `;
 }
@@ -629,4 +632,5 @@ export function displayTradingResults(results, analysisDuration, timeSinceOldest
 
     html += '</tbody></table>';
     tradingOutput.innerHTML = html;
+
 }
