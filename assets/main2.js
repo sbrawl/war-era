@@ -640,7 +640,7 @@ async function handleFetchUser() {
         ensureCacheReady();
 
         userPPPerSession = userData.skills?.production?.value || 12;
-        mysessionperday = (userData.skills?.energy?.hourlyBarRegen * 24) / 10 || 0;
+        mysessionperday = (userData.skills?.entrepreneurship?.hourlyBarRegen * 24) / 10 || 0;
         const userCountryData = countryDataCache.get(userData.country);
         displayUser(userData, userCountryData); 
         
@@ -984,4 +984,5 @@ dateQuickBtns.forEach(btn => {
 
 
 // Lancer l'initialisation au démarrage
+
 initAnalysisDates();
