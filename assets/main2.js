@@ -698,7 +698,7 @@ async function handleFetchUser() {
                         netProfit: netProfit,
                         netProfitGross: netProfitGross,
                         costperSession: costperSession,
-                        breakEvenPrice: worker.wage / (1 + company.bonus),
+                        breakEvenPrice: worker.wage / (1 + company.bonus + worker.fidelity/100),
                         ppStocked: ppStocked,
                         fidelity: worker.fidelity || 0,
                         estimatedDailySessions: estimatedDailySessions,
@@ -986,3 +986,4 @@ dateQuickBtns.forEach(btn => {
 // Lancer l'initialisation au démarrage
 
 initAnalysisDates();
+
