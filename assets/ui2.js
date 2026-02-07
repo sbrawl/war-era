@@ -446,7 +446,7 @@ export function displayCompanies(companiesList) {
                     <th>Coût en PP</th>
                     <th>Valeur/PP (avec MP)</th>
                     <th>Valeur/PP (sans MP)</th>
-                    <th>Salaire Min</th>
+                    <th>Salaire Max</th>
                     <th>Salaire Max Marché</th>
                     <th>Rentabilité si Alignement (12 PP)</th>
                 </tr></thead><tbody>`;
@@ -634,3 +634,4 @@ export function displayTradingResults(results, analysisDuration, timeSinceOldest
     tradingOutput.innerHTML = html;
 
 }
+
